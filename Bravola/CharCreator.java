@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.io.Console;
 import java.io.IOException;
 
-
 class PChar
 {
 
@@ -103,13 +102,13 @@ public class CharCreator
 
     System.out.println("What is your name?");
     System.out.print("> ");
-    String pname = in.next();
-    Player.name = pname;
+    Player.name = in.next();
     System.out.println("Welcome, " + Player.name + ".");
 
     System.out.println();
 
     Boolean choosingRace = true;
+
     while (choosingRace == true)
     {
       System.out.println("What is your race?");
@@ -136,12 +135,12 @@ public class CharCreator
 
         if (choice == 1)
         {
-          Player.race = "Human"
+          Player.race = "Human";
           choosingRace = false;
         }
-        if (choice == 2)
+        else if (choice == 2)
         {
-          break;
+
         }
         else
         {
@@ -162,24 +161,25 @@ public class CharCreator
 
         if (choice == 1)
         {
-          Player.race = "Smith"
+          Player.race = "Smith";
+          Player.str = 1;
+          Player.vit = 1;
+          Player.kno = 1;
+          Player.dex = 1;
+          Player.cha = 1;
+          Player.per = 1;
           choosingRace = false;
         }
-        if (choice == 2)
+        else if (choice == 2)
         {
-          break;
+
         }
         else
         {
           System.out.println("Invalid input.");
         }
 
-        Player.str = 1;
-        Player.vit = 1;
-        Player.kno = 1;
-        Player.dex = 1;
-        Player.cha = 1;
-        Player.per = 1;
+
       }
       else if (choice == 3)
       {
@@ -195,18 +195,24 @@ public class CharCreator
 
         choice = in.nextInt();
 
-
-        if (choice == 2)
+        if (choice == 1)
         {
-          break;
+          Player.race = "Space Elf";
+          Player.cha = 14;
+          Player.str = 6;
+          choosingRace = false;
+        }
+
+        else if (choice == 2)
+        {
+
         }
         else
         {
           System.out.println("Invalid input.");
         }
 
-        Player.cha = 14;
-        Player.str = 6;
+
       }
       else if (choice == 4)
       {
@@ -222,17 +228,25 @@ public class CharCreator
 
         choice = in.nextInt();
 
-        if (choice == 2)
+        if (choice == 1)
         {
-          break;
+          Player.race = "Gnarp'i";
+          Player.per = 14;
+          Player.vit = 6;
+
+          choosingRace = false;
+        }
+
+        else if (choice == 2)
+        {
+
         }
         else
         {
           System.out.println("Invalid input.");
         }
 
-        Player.per = 14;
-        Player.vit = 6;
+
       }
       else if (choice == 5)
       {
@@ -248,17 +262,25 @@ public class CharCreator
 
         choice = in.nextInt();
 
-        if (choice == 2)
+        if (choice == 1)
         {
-          break;
+          Player.race = "Android";
+          Player.vit = 14;
+          Player.cha = 6;
+
+          choosingRace = false;
+        }
+
+        else if (choice == 2)
+        {
+
         }
         else
         {
           System.out.println("Invalid input.");
         }
 
-        Player.vit = 14;
-        Player.cha = 6;
+
       }
       else if (choice == 6)
       {
@@ -275,22 +297,27 @@ public class CharCreator
 
         choice = in.nextInt();
 
-        if (choice == 2)
+        if (choice == 1)
         {
-          break;
+          Player.race = "Butlar";
+          Player.str = 14;
+          Player.dex = 6;
+
+          choosingRace = false;
+        }
+
+        else if (choice == 2)
+        {
+
         }
         else
         {
           System.out.println("Invalid input.");
         }
 
-        Player.str = 14;
-        Player.dex = 6;
+
       }
     }
-
-
-
 
 
     System.out.println("You will now choose your stats.");
@@ -308,15 +335,6 @@ public class CharCreator
     Player.hair = in.next();
 
 
-
-
-
-/*    while choosing == true
-    {
-      int points = 5;
-
-
-    } */
 
   }
 
